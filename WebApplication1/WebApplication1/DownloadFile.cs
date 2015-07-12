@@ -13,7 +13,7 @@ namespace WebApplication1
         /// <param name="URL">下载文件地址</param>
         /// <param name="Filename">下载后另存为（全路径）</param>
 
-        public static bool DownloadFile(string URL, string filename)
+        public static bool DownloadFileFromURL(string URL, string filename)
         {
             try
             {

@@ -11,7 +11,7 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApplication1</RootNamespace>
+    <RootNamespace>Leo.FrameWork</RootNamespace>
     <AssemblyName>WebApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
@@ -39,6 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
@@ -59,28 +63,51 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="UploadFile\jquery.ajaxfileupload.js" />
+    <Content Include="UploadFile\UploadCtrl.js" />
     <Content Include="WebForm2.aspx" />
+    <Content Include="packages.config" />
     <None Include="Service References\MeetingManageService\configuration91.svcinfo" />
     <None Include="Service References\MeetingManageService\configuration.svcinfo" />
     <Content Include="Service References\MeetingManageService\meetingmanageservice1.wsdl" />
+    <Content Include="Service References\MeetingManageService\Leo.FrameWork.MeetingManageService.UrgeMeetingManageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\MeetingManageService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Service References\MeetingManageService\meetingmanageservice1.disco" />
     <Content Include="Web.config" />
-    <Content Include="Service References\MeetingManageService\WebApplication1.MeetingManageService.UrgeMeetingManageResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DownloadFile.cs" />
+    <Compile Include="Log\Config\LogConfigurationElement.cs" />
+    <Compile Include="Log\Config\LoggerElement.cs" />
+    <Compile Include="Log\Config\LoggerElementCollection.cs" />
+    <Compile Include="Log\Config\LoggingSection.cs" />
+    <Compile Include="Log\Formatters\ILogFormatter.cs" />
+    <Compile Include="Log\Formatters\LogFormatter.cs" />
+    <Compile Include="Log\Formatters\LogFormatterFactory.cs" />
+    <Compile Include="Log\Formatters\TextLogFormatter.cs" />
+    <Compile Include="Log\Formatters\TokenFunction.cs" />
+    <Compile Include="Log\Listeners\FormattedTraceListenerBase.cs" />
+    <Compile Include="Log\LogEntity.cs" />
+    <Compile Include="Log\LogException.cs" />
+    <Compile Include="Log\LogPriority.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\MeetingManageService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFile\Attachments.cs" />
+    <Compile Include="UploadFile\ExtensionMethod.cs" />
+    <Compile Include="UploadFile\FileServerConnection.cs" />
+    <Compile Include="UploadFile\FileUploadHelper.cs" />
+    <Compile Include="UploadFile\upload_ajax.ashx.cs">
+      <DependentUpon>upload_ajax.ashx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
@@ -98,6 +125,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="UploadFile\upload_ajax.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,6 +139,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\MeetingManageService\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

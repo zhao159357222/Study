@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1.MeetingManageService {
+namespace Leo.FrameWork.MeetingManageService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -17,10 +17,10 @@ namespace WebApplication1.MeetingManageService {
         
         // CODEGEN: 命名空间 http://cfldcn.com/meetingwebservices/ 的元素名称 meetingInfo 以后生成的消息协定未标记为 nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://cfldcn.com/meetingwebservices/UrgeMeetingManage", ReplyAction="*")]
-        WebApplication1.MeetingManageService.UrgeMeetingManageResponse UrgeMeetingManage(WebApplication1.MeetingManageService.UrgeMeetingManageRequest request);
+        Leo.FrameWork.MeetingManageService.UrgeMeetingManageResponse UrgeMeetingManage(Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://cfldcn.com/meetingwebservices/UrgeMeetingManage", ReplyAction="*")]
-        System.Threading.Tasks.Task<WebApplication1.MeetingManageService.UrgeMeetingManageResponse> UrgeMeetingManageAsync(WebApplication1.MeetingManageService.UrgeMeetingManageRequest request);
+        System.Threading.Tasks.Task<Leo.FrameWork.MeetingManageService.UrgeMeetingManageResponse> UrgeMeetingManageAsync(Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -30,12 +30,12 @@ namespace WebApplication1.MeetingManageService {
     public partial class UrgeMeetingManageRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UrgeMeetingManage", Namespace="http://cfldcn.com/meetingwebservices/", Order=0)]
-        public WebApplication1.MeetingManageService.UrgeMeetingManageRequestBody Body;
+        public Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequestBody Body;
         
         public UrgeMeetingManageRequest() {
         }
         
-        public UrgeMeetingManageRequest(WebApplication1.MeetingManageService.UrgeMeetingManageRequestBody Body) {
+        public UrgeMeetingManageRequest(Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -64,12 +64,12 @@ namespace WebApplication1.MeetingManageService {
     public partial class UrgeMeetingManageResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UrgeMeetingManageResponse", Namespace="http://cfldcn.com/meetingwebservices/", Order=0)]
-        public WebApplication1.MeetingManageService.UrgeMeetingManageResponseBody Body;
+        public Leo.FrameWork.MeetingManageService.UrgeMeetingManageResponseBody Body;
         
         public UrgeMeetingManageResponse() {
         }
         
-        public UrgeMeetingManageResponse(WebApplication1.MeetingManageService.UrgeMeetingManageResponseBody Body) {
+        public UrgeMeetingManageResponse(Leo.FrameWork.MeetingManageService.UrgeMeetingManageResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -92,12 +92,12 @@ namespace WebApplication1.MeetingManageService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface meetingManageServiceSoapChannel : WebApplication1.MeetingManageService.meetingManageServiceSoap, System.ServiceModel.IClientChannel {
+    public interface meetingManageServiceSoapChannel : Leo.FrameWork.MeetingManageService.meetingManageServiceSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class meetingManageServiceSoapClient : System.ServiceModel.ClientBase<WebApplication1.MeetingManageService.meetingManageServiceSoap>, WebApplication1.MeetingManageService.meetingManageServiceSoap {
+    public partial class meetingManageServiceSoapClient : System.ServiceModel.ClientBase<Leo.FrameWork.MeetingManageService.meetingManageServiceSoap>, Leo.FrameWork.MeetingManageService.meetingManageServiceSoap {
         
         public meetingManageServiceSoapClient() {
         }
@@ -119,28 +119,28 @@ namespace WebApplication1.MeetingManageService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WebApplication1.MeetingManageService.UrgeMeetingManageResponse WebApplication1.MeetingManageService.meetingManageServiceSoap.UrgeMeetingManage(WebApplication1.MeetingManageService.UrgeMeetingManageRequest request) {
+        Leo.FrameWork.MeetingManageService.UrgeMeetingManageResponse Leo.FrameWork.MeetingManageService.meetingManageServiceSoap.UrgeMeetingManage(Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequest request) {
             return base.Channel.UrgeMeetingManage(request);
         }
         
         public string UrgeMeetingManage(string meetingInfo) {
-            WebApplication1.MeetingManageService.UrgeMeetingManageRequest inValue = new WebApplication1.MeetingManageService.UrgeMeetingManageRequest();
-            inValue.Body = new WebApplication1.MeetingManageService.UrgeMeetingManageRequestBody();
+            Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequest inValue = new Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequest();
+            inValue.Body = new Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequestBody();
             inValue.Body.meetingInfo = meetingInfo;
-            WebApplication1.MeetingManageService.UrgeMeetingManageResponse retVal = ((WebApplication1.MeetingManageService.meetingManageServiceSoap)(this)).UrgeMeetingManage(inValue);
+            Leo.FrameWork.MeetingManageService.UrgeMeetingManageResponse retVal = ((Leo.FrameWork.MeetingManageService.meetingManageServiceSoap)(this)).UrgeMeetingManage(inValue);
             return retVal.Body.UrgeMeetingManageResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WebApplication1.MeetingManageService.UrgeMeetingManageResponse> WebApplication1.MeetingManageService.meetingManageServiceSoap.UrgeMeetingManageAsync(WebApplication1.MeetingManageService.UrgeMeetingManageRequest request) {
+        System.Threading.Tasks.Task<Leo.FrameWork.MeetingManageService.UrgeMeetingManageResponse> Leo.FrameWork.MeetingManageService.meetingManageServiceSoap.UrgeMeetingManageAsync(Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequest request) {
             return base.Channel.UrgeMeetingManageAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WebApplication1.MeetingManageService.UrgeMeetingManageResponse> UrgeMeetingManageAsync(string meetingInfo) {
-            WebApplication1.MeetingManageService.UrgeMeetingManageRequest inValue = new WebApplication1.MeetingManageService.UrgeMeetingManageRequest();
-            inValue.Body = new WebApplication1.MeetingManageService.UrgeMeetingManageRequestBody();
+        public System.Threading.Tasks.Task<Leo.FrameWork.MeetingManageService.UrgeMeetingManageResponse> UrgeMeetingManageAsync(string meetingInfo) {
+            Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequest inValue = new Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequest();
+            inValue.Body = new Leo.FrameWork.MeetingManageService.UrgeMeetingManageRequestBody();
             inValue.Body.meetingInfo = meetingInfo;
-            return ((WebApplication1.MeetingManageService.meetingManageServiceSoap)(this)).UrgeMeetingManageAsync(inValue);
+            return ((Leo.FrameWork.MeetingManageService.meetingManageServiceSoap)(this)).UrgeMeetingManageAsync(inValue);
         }
     }
 }

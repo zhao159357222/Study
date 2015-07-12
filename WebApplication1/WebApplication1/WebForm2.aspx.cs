@@ -16,7 +16,7 @@ namespace WebApplication1
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            DownloadFile.DownloadFile(txtURL.Text, txtResultPath.Text);
+            DownloadFile.DownloadFileFromURL(txtURL.Text, txtResultPath.Text);
         }
     }
 }
